@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>韦特塔罗四牌抽牌阵</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>韦特塔罗四牌抽牌阵</h1>
+      <p class="description">
+        每回合都会完整洗牌（1-78），再随机抽取 4 张不重复的牌，并给出基于基础牌意的中性解读。
+      </p>
+
+      <section class="panel">
+        <label for="question">你的问题</label>
+        <textarea
+          id="question"
+          rows="3"
+          placeholder="例如：这段时间我在工作推进上需要注意什么？"
+        ></textarea>
+        <button id="drawBtn">彻底洗牌并抽 4 张牌</button>
+      </section>
+
+      <section id="result" class="panel hidden" aria-live="polite">
+        <h2>本回合抽牌结果</h2>
+        <p id="roundInfo" class="meta"></p>
+        <div id="cards" class="card-grid"></div>
+
+        <h3>简要解牌（中性）</h3>
+        <p id="reading" class="reading"></p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
